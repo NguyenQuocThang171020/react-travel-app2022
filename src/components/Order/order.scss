@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+.order-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cookie", cursive;
+  overflow-x: hidden;
+  .loading {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    position: absolute;
+    .load {
+      width: 50px;
+      height: 50px;
+      border: 5px solid skyblue;
+      border-radius: 50%;
+      border-right: 5px solid transparent;
+      animation: spiner 1s infinite linear;
+    }
+    p {
+      color: skyblue;
+    }
+  }
+  .form {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../asset/order1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .modal {
+      position: absolute;
+      width: 500px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      font-size: 30px;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px snow skyblue;
+      justify-content: center;
+      .notice {
+        width: 100%;
+        height: 20%;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        background: skyblue;
+      }
+      .success {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        button {
+          width: 100px;
+          height: 35px;
+          border: none;
+          background: skyblue;
+          color: #fff;
+          border-radius: 5px;
+          transition: all 0.5s ease;
+          &:hover {
+            background: #fff;
+            color: skyblue;
+            border: 2px solid skyblue;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    form {
+      margin-top: 50px;
+      width: 60%;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 30px;
+      label {
+        color: skyblue;
+        font-weight: bold;
+      }
+      input {
+        font-family: "Cookie", cursive;
+        font-size: 30px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid skyblue;
+        width: 70%;
+        height: 35px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .quantity {
+        display: flex;
+        margin: 10px;
+        p {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          text-align: center;
+          color: black;
+          margin: 0 50px;
+          border: 1px solid skyblue;
+          cursor: pointer;
+          transition: all 0.5s ease;
+          &:hover {
+            background: skyblue;
+            color: black;
+          }
+        }
+      }
+      p {
+        margin: 10px 0;
+        color: crimson;
+      }
+      .order-btn {
+        width: 160px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        margin: 10px;
+        color: skyblue;
+        transition: all 0.5s ease;
+        border: 2px solid skyblue;
+        &:hover {
+          background: skyblue;
+          color: black;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .nav {
+    z-index: 10;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes spiner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .order-page {
+    .load {
+      width: 40px;
+      height: 40px;
+    }
+    .form {
+      form {
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .order-page {
+    .load {
+      width: 40px;
+      height: 40px;
+    }
+    .form {
+      .modal {
+        width: 300px;
+        height: 200px;
+        font-size: 30px;
+        .btn {
+          button {
+            width: 100px;
+            height: 35px;
+          }
+        }
+      }
+      width: 100%;
+      height: 100%;
+      form {
+        border-radius: 5px;
+        padding: 20px;
+        background: #fff;
+        font-size: 25px;
+        width: 90%;
+        height: 80%;
+        input {
+          width: 100%;
+          height: 30px;
+          font-size: 20px;
+        }
+        .quantity {
+          p {
+            margin: 0 10px;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+          }
+        }
+        p {
+          font-weight: bold;
+        }
+        button {
+          font-size: 15px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

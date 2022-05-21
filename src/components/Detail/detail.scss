@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+.detail-page {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+  .loading {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    position: absolute;
+    .load {
+      width: 50px;
+      height: 50px;
+      border: 5px solid skyblue;
+      border-radius: 50%;
+      border-right: 5px solid transparent;
+      animation: spiner 1s infinite linear;
+    }
+    p {
+      color: skyblue;
+    }
+  }
+  .nav {
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .detail {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    .hotel-all {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .hotel-name {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 10px;
+        color: skyblue;
+        border-bottom: 2px solid skyblue;
+      }
+      .hotel-image {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 1000px;
+          height: 80vh;
+          object-fit: cover;
+          border-radius: 5px;
+          margin: 10px;
+        }
+      }
+      .price {
+        width: 100%;
+        color: crimson;
+        font-weight: bold;
+      }
+      .btn-hire {
+        width: 100%;
+        button {
+          width: 150px;
+          height: 40px;
+          margin: 10px;
+          border-radius: 5px;
+          background: skyblue;
+          border: none;
+          color: #fff;
+          font-size: 18px;
+          font-weight: bold;
+          transition: all 0.5s ease;
+          &:hover {
+            transform: scale(1.1);
+            background: #fff;
+            color: skyblue;
+            border: 1px solid skyblue;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes spiner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1024px){
+    .detail-page {
+        .loading {
+          .load {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .nav{
+            height: 70px;
+        }
+        .detail {
+          .hotel-all {
+            .hotel-name {
+              font-size: 45px;
+            }
+            .hotel-image {
+              img {
+                width: 750px;
+                height: 500px;
+              }
+            }
+            .price {
+                font-size: 40px;
+            }
+            .btn-hire {
+              button {
+                width: 200px;
+                height: 50px;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+}
+@media screen and (max-width: 768px){
+    .detail-page {
+        .loading {
+          .load {
+            width: 35px;
+            height: 35px;
+          }
+        }
+        .detail {
+          .hotel-all {
+            .hotel-name {
+              font-size: 40px;
+            }
+            .hotel-image {
+              img {
+                width: 570px;
+                height: 400px;
+              }
+            }
+          }
+        }
+      }
+}
+@media screen and (max-width: 600px){
+    .detail-page {
+        .loading {
+          .load {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .detail {
+            margin-top: 30px;
+          .hotel-all {
+            .hotel-name {
+              font-size: 35px;
+            }
+            .hotel-image {
+              img {
+                width: 450px;
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+}
+@media screen and (max-width: 480px){
+    .detail-page {
+        .loading {
+          .load {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .detail {
+          .hotel-all {
+            .hotel-name {
+              font-size: 30px;
+            }
+            .hotel-image {
+              img {
+                width: 300px;
+                height: 200px;
+              }
+            }
+            .price {
+                font-size: 30px;
+            }
+            .btn-hire {
+              button {
+                width: 150px;
+                height: 40px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+}

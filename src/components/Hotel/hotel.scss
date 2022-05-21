@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+.hotel-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cookie", cursive;
+  font-size: 25px;
+  overflow-x: hidden;
+  .loading {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    position: absolute;
+    .load {
+      width: 50px;
+      height: 50px;
+      border: 5px solid skyblue;
+      border-radius: 50%;
+      border-right: 5px solid transparent;
+      animation: spiner 1s infinite linear;
+    }
+    p {
+      color: skyblue;
+    }
+  }
+  .slide-show {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 99;
+    }
+    .slide {
+      .swiper {
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .hotel-title {
+    color: skyblue;
+    font-weight: bold;
+    margin: 20px;
+    font-size: 40px;
+    border-bottom: 2px solid skyblue;
+  }
+  .list-hotel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .hotel-all {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(#fff, skyblue, #fff);
+      padding: 10px;
+      .img-hotel {
+        padding: 10px;
+        img {
+          width: 350px;
+          height: 250px;
+          object-fit: contain;
+          padding: 10px;
+        }
+      }
+      .info-hotel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .hotel-name {
+          h3 {
+            color: black;
+          }
+          p {
+            color: gray;
+          }
+          .price {
+            color: red;
+          }
+          .terrible {
+            background: crimson;
+            width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            padding: 3px;
+            color: #fff;
+          }
+          .good {
+            width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            background: green;
+            padding: 3px;
+            color: #fff;
+          }
+        }
+        .btn-more {
+          button {
+            border-radius: 5px;
+            margin: 10px 0;
+            width: 100px;
+            height: 35px;
+            border: 1px solid #fff;
+            background: skyblue;
+            color: #fff;
+            transition: all 0.5s ease;
+            &:hover {
+              background: #fff;
+              color: skyblue;
+              border: 1px solid skyblue;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+  }
+}
+@keyframes spiner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .hotel-page {
+    .load {
+      width: 40px;
+      height: 40px;
+    }
+    .hotel-title {
+      font-size: 40px;
+    }
+    .list-hotel {
+        padding: 20px;
+      .hotel-all {
+        grid-template-columns: 40% 60%;
+        .img-hotel {
+          padding: 0;
+          margin: 0;
+          img {
+            width: 400px;
+            height: 250px;
+          }
+        }
+        .info-hotel {
+            padding: 20px;
+          .hotel-name {
+            h3 {
+              font-size: 30px;
+            }
+            p {
+              font-size: 25px;
+            }
+            .price {
+              font-size: 30px;
+            }
+            .terrible {
+              width: 120px;
+              padding: 5px;
+            }
+            .good {
+              width: 120px;
+              padding: 5px;
+            }
+          }
+          .btn-more {
+            button {
+              width: 120px;
+              height: 40px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hotel-page {
+    .load {
+      width: 35px;
+      height: 35px;
+    }
+    .hotel-title {
+      font-size: 40px;
+    }
+    .list-hotel {
+      .hotel-all {
+        padding: 10px;
+        grid-template-columns: 1fr;
+        .img-hotel {
+          text-align: center;
+          img {
+            width: 750px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hotel-page {
+    .hotel-title {
+      font-size: 30px;
+    }
+    .list-hotel {
+      .hotel-all {
+        .img-hotel {
+          padding: 0;
+          margin: 0;
+          img {
+            width: 550px;
+            height: 350px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+    .hotel-page {
+      .list-hotel {
+        .hotel-all {
+          .img-hotel {
+            img {
+              width: 300px;
+              height: 220px;
+            }
+          } 
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .hotel-page {
+      .list-hotel {
+        .hotel-all {
+          .img-hotel {
+            img {
+              width: 260px;
+              height: 200px;
+            }
+          } 
+        }
+      }
+    }
+  }
